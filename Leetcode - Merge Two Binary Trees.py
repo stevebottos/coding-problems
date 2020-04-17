@@ -19,10 +19,10 @@ class Solution:
             return t1
         
         """
-        The meat of the program. Just yesterday I did a problem involving a dfs so I won't use recursion             here.
+        The meat of the program. Just yesterday I did a problem involving a dfs so I won't use recursion here.
         Instead, I'll work through the implementation that utilizes stacks.
         
-        The stack will either contain a node pair or a single node. t1 will be the tree that we modify in             place and return at the end. You really only have to worry about the folowing scenarios:
+        The stack will either contain a node pair or a single node. t1 will be the tree that we modify in place and return at the end. You really only have to worry about the folowing scenarios:
         
         1) If t1 and t2 overlap, modify t1 in place as t1.val += t2.val
         2) If there is no node for t1 but there is for t2, "remove" that node from t2 and put it onto t1
