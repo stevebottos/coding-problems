@@ -1,5 +1,7 @@
-# NOTE THAT THIS IS A WORK IN PROGRESS, IT DOESN'T PASS ALL TEST CASES
-
+"""
+NOTE THAT THIS IS A WORK IN PROGRESS, IT DOESN'T PASS ALL TEST CASES
+... This solution breaks as soon as the seat at 0 or N-1 is removed. The proper solution uses a heap, work through that implementation next.
+"""
 class ExamRoom:
 
     def __init__(self, N: int):
