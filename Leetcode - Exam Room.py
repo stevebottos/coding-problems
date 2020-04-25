@@ -12,6 +12,13 @@ class ExamRoom:
         print("- - - - -")
         print(self.seats_taken)
         
+        """
+        Take care of the obvious cases first:
+        1) If the row is empty, sit in the first seat
+        2) If the last seat is free, sit there
+        
+        The next case will compute the max space between two seats
+        """
         if self.seats_taken[0] == 0:
             self.seats_taken[0] = 1
             print(0)
@@ -21,16 +28,20 @@ class ExamRoom:
             print(self.N-1)
             return self.N-1
         else:
-            indices = [None, None]
             max_dist = 0
             dist = 0
             end_pt = 0
             
             for i in range(self.N):
+                # If the seat is empty, the increment the distance by 1 ...
                 if self.seats_taken[i] == 0:
                     dist += 1
 
+                # ... Until you reach a non-empty seat ...
                 elif self.seats_taken[i] == 1:
+                    
+                    # ... Then, if there are only two empty seats, then the "true distance" from another person is 1
+
                     elif dist == 2:
                         true_dist = 1
                     else:
