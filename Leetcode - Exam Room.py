@@ -23,7 +23,7 @@ class ExamRoom:
             self.seats_taken[0] = 1
             print(0)
             return 0
-        elif self.seats_taken[self.N-1] == 0:
+        elif self.seats_taken[self.N-1] == 0 and sum(self.seats_taken) == 1:
             self.seats_taken[self.N-1] = 1
             print(self.N-1)
             return self.N-1
@@ -41,15 +41,17 @@ class ExamRoom:
                 elif self.seats_taken[i] == 1:
                     
                     # ... Then, if there are only two empty seats, then the "true distance" from another person is 1
-
-                    elif dist == 2:
+                    if dist == 2 or dist == 1:
                         true_dist = 1
                     else:
                         true_dist = int(dist-1/2)
                         
                     if true_dist > max_dist:
+                        print("ye")
                         end_pt = i-1
                         max_dist = dist
+                        
+                    print(true_dist, end_pt)
                     dist = 0
                     
             seat_sat_in = end_pt-int(max_dist/2)
