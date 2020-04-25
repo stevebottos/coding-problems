@@ -33,6 +33,8 @@ class Solution:
             #     return Solution.dfs(node.left, target)
             # if node.right:
             #     return Solution.dfs(node.right, target)
+	
+	    # Removing this None might make it work
             # return None
             
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
