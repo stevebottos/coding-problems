@@ -1,4 +1,3 @@
-# Test case failed on: [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]
 class Solution:
     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
         if len(people) == 0:
