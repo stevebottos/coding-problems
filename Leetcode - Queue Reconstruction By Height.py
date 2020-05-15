@@ -1,3 +1,4 @@
+# Should work on speeding this up, but it runs
 class Solution:
     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
         if len(people) == 0:
