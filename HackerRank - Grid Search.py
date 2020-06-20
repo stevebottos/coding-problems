@@ -2,7 +2,7 @@
 TODO: The sequence can be repeating in a row, so we need to account for that and search each case in the row to see if it works
 Also it fails to account for the case where the check fails on a row but a new start of the sequence is in that row
 """
-# Complete the gridSearch function below.
+
 def gridSearch(G, P):
 
     p = 0
